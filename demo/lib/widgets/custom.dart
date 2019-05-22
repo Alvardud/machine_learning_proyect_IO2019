@@ -108,7 +108,7 @@ class _ContenidoState extends State<Contenido> {
       children: <Widget>[
         Center(
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 80.0),
+            padding: const EdgeInsets.symmetric(vertical: 50.0),
             child: InkWell(
               onTap: () {
                 _getImage().then((value) {
@@ -125,7 +125,8 @@ class _ContenidoState extends State<Contenido> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   const Icon(Icons.camera_alt,
-                      size: 75.0, color: colores.border),
+                      size: 100.0, color: colores.border
+                  ),
                   
                 ],
               ),
