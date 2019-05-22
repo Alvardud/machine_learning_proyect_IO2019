@@ -40,10 +40,7 @@ class _MyHomepageState extends State<MyHomepage> {
                 flex: 6,
                 child: custom.Photo(),
               ),
-              Flexible(
-                flex: 2,
-                child: bottom.Bottom(),
-              )
+              
             ],
           ),
         ),
