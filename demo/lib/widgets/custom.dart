@@ -127,6 +127,10 @@ class _ContenidoState extends State<Contenido> {
                   const Icon(Icons.camera_alt,
                       size: 100.0, color: colores.border
                   ),
+                  const Text(
+                    cadenas.foto,
+                    style: TextStyle(color: colores.botonPhoto, fontSize: 20.0),
+                  ),
                   
                 ],
               ),
