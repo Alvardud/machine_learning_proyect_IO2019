@@ -106,7 +106,6 @@ class _ContenidoState extends State<Contenido> {
     final schedule = Provider.of<MySchedule>(context);
     return Stack(
       children: <Widget>[
-        Construccion(),
         Center(
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 80.0),
@@ -163,42 +162,4 @@ class _BotonPhotoState extends State<BotonPhoto> {
   }
 }
 
-class Construccion extends StatefulWidget {
-  @override
-  _ConstruccionState createState() => _ConstruccionState();
-}
 
-class _ConstruccionState extends State<Construccion> {
-  @override
-  Widget build(BuildContext context) {
-    return Stack(
-      children: <Widget>[
-        canvas.Camera(),
-        Positioned(
-          right: 0.0,
-          top: 0.0,
-          child: Transform.rotate(
-            angle: pi / 2,
-            child: canvas.Camera(),
-          ),
-        ),
-        Positioned(
-          right: 0.0,
-          bottom: 0.0,
-          child: Transform.rotate(
-            angle: pi,
-            child: canvas.Camera(),
-          ),
-        ),
-        Positioned(
-          left: 0.0,
-          bottom: 0.0,
-          child: Transform.rotate(
-            angle: -pi / 2,
-            child: canvas.Camera(),
-          ),
-        )
-      ],
-    );
-  }
-}
