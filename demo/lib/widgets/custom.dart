@@ -126,7 +126,7 @@ class _ContenidoState extends State<Contenido> {
                 children: <Widget>[
                   const Icon(Icons.camera_alt,
                       size: 75.0, color: colores.border),
-                  BotonPhoto(),
+                  
                 ],
               ),
             ),
@@ -137,29 +137,6 @@ class _ContenidoState extends State<Contenido> {
   }
 }
 
-class BotonPhoto extends StatefulWidget {
-  @override
-  _BotonPhotoState createState() => _BotonPhotoState();
-}
 
-class _BotonPhotoState extends State<BotonPhoto> {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.only(top: 16.0),
-      height: 40.0,
-      width: 160.0,
-      decoration: BoxDecoration(
-          border: Border.all(color: colores.botonPhoto),
-          borderRadius: BorderRadius.circular(5.0)),
-      child: Center(
-        child: const Text(
-          cadenas.botonFoto,
-          style: TextStyle(color: colores.botonPhoto, fontSize: 20.0),
-        ),
-      ),
-    );
-  }
-}
 
 
