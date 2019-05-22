@@ -36,7 +36,7 @@ class _PhotoState extends State<Photo> {
     final schedule = Provider.of<MySchedule>(context);
 
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 28.0, horizontal: 36.0),
+      padding: const EdgeInsets.symmetric(vertical: 0.0, horizontal: 36.0),
       child: Container(
         child: !schedule.estado ? Contenido() : Imagen(),
       ),
@@ -108,7 +108,7 @@ class _ContenidoState extends State<Contenido> {
       children: <Widget>[
         Center(
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 50.0),
+            padding: const EdgeInsets.symmetric(vertical: 30.0),
             child: InkWell(
               onTap: () {
                 _getImage().then((value) {
@@ -129,6 +129,16 @@ class _ContenidoState extends State<Contenido> {
                   ),
                   const Text(
                     cadenas.foto,
+                    style: TextStyle(color: colores.botonPhoto, fontSize: 20.0),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 30.0),
+                  ),
+                  const Icon(Icons.format_list_bulleted,
+                      size: 100.0, color: colores.border
+                  ),
+                  const Text(
+                    cadenas.encuesta,
                     style: TextStyle(color: colores.botonPhoto, fontSize: 20.0),
                   ),
                   
