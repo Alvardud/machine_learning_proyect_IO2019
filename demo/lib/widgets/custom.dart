@@ -131,17 +131,6 @@ class _ContenidoState extends State<Contenido> {
                     cadenas.foto,
                     style: TextStyle(color: colores.botonPhoto, fontSize: 20.0),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 30.0),
-                  ),
-                  const Icon(Icons.format_list_bulleted,
-                      size: 100.0, color: colores.border
-                  ),
-                  const Text(
-                    cadenas.encuesta,
-                    style: TextStyle(color: colores.botonPhoto, fontSize: 20.0),
-                  ),
-                  
                 ],
               ),
             ),
