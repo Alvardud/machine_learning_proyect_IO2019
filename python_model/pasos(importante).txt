@@ -1,0 +1,8 @@
+--recibimos la imagen del dispositivo movil
+
+-- Levantamos el servidor de tensorflow
+    > cd metodo
+    > tensorflow_model_server --model_base_path=$(pwd) --rest_api_port=9000 --model_name=metodo
+
+--hacemos correr el script: "usageLocalHost.ipynb" (en este caso esta en formato de notebook, convertir a python)
+    --este script te devuelve un JSON, dicho JSON, debe ser recibido en el dispositivo movil

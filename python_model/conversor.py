@@ -1,3 +1,5 @@
+#conversor del modelo a tflite
+
 import tensorflow as tf
 
 path="simpleKeras/"
