@@ -1,3 +1,6 @@
+# modelo de entramiento
+
+
 import argparse
 
 import numpy as np
@@ -117,7 +120,6 @@ def duplicate_input_layer(array_input, size):
         item[:, :, 2] = array_input[index]
     return vg_input
 
-
 def main():
     # used to get the session/graph data from keras
     K.set_learning_phase(0)
@@ -169,13 +171,11 @@ def main():
 
     print("After top_layer_model training (test set): {}".format(score))
 
-    # Merge two models and create the final_model_final_final
+    
     inputs = Input(shape=(48, 48, 3))
     vg_output = vgg16(inputs)
     print("vg_output: {}".format(vg_output.shape))
 
-    # TODO: the 'pooling' argument of the VGG16 model is important for this to work otherwise you will have to  squash
-    # output from (?, 1, 1, 512) to (?, 512)
     model_predictions = top_layer_model(vg_output)
     final_model = Model(input=inputs, output=model_predictions)
     final_model.compile(loss='categorical_crossentropy',
@@ -187,12 +187,7 @@ def main():
     final_model_score = final_model.evaluate(x_test_input,
                                              y_test, batch_size=FLAGS.batch_size)
     print("Sanity check - final_model (test score): {}".format(final_model_score))
-    # config = final_model.get_config()
-    # weights = final_model.get_weights()
-
-    # probably don't need to create a new model
-    # model_to_save = Model.from_config(config)
-    # model_to_save.set_weights(weights)
+    
     model_to_save = final_model
 
     print("Model input name: {}".format(model_to_save.input))
