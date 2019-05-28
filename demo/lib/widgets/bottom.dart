@@ -20,18 +20,11 @@ class Bottom extends StatelessWidget {
 }
 
 class BotonEncuesta extends StatelessWidget {
-  Widget boton() {
-    return Container(
-      margin: EdgeInsets.only(left: 12.0),
-      width: 100.0,
-      height: 40.0,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(5.0), color: colores.accent),
-      child: Center(
-          child: Text(
-        cadenas.botonEncuesta,
-        style: TextStyle(color: colores.blanco),
-      )),
+  Widget IconButton() {
+    return new Icon(
+      Icons.home,
+      size: 65.0,
+      color: Colors.black45,
     );
   }
 
@@ -42,14 +35,15 @@ class BotonEncuesta extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Flexible(
-            flex: 4,
+            flex: 14,
             child: Center(
               child: Padding(
-                padding: const EdgeInsets.only(right: 8.0),
+                padding: const EdgeInsets.only(right: 1.0),
                 child: const Text(
-                  cadenas.textoEncuesta,
+                  cadenas.titulo,
                   style: TextStyle(
-                    color: colores.textoPlano,
+                    fontSize: 28.0,
+                    fontWeight: FontWeight.w300
                   ),
                 ),
               ),
@@ -58,8 +52,8 @@ class BotonEncuesta extends StatelessWidget {
           Flexible(
             flex: 3,
             child: Center(
-                child: InkWell(
-              child: boton(),
+              child: InkWell(
+              child: IconButton(),
               onTap: () {
                 //TODO: llevarme a las encuestas
               },

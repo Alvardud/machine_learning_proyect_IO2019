@@ -12,7 +12,9 @@ import 'package:provider/provider.dart';
 File picture;
 Future<bool> _getImage() async {
   picture = await ImagePicker.pickImage(
-      source: ImageSource.camera, maxWidth: 350.0, maxHeight: 350.0);
+      source: ImageSource.camera, maxWidth: 350.0, maxHeight: 350.0
+  );
+  
   if (picture != null) {
     return true;
   } else {
@@ -58,17 +60,14 @@ class _ImagenState extends State<Imagen> {
       child: Stack(
         children: <Widget>[
           Positioned(
-            left: MediaQuery.of(context).size.width / 8,
+            top: MediaQuery.of(context).size.height/8,
             child: ClipRRect(
-              borderRadius: BorderRadius.circular(15.0),
-              child: Image.file(
-                schedule.archivo,
-                fit: BoxFit.fitWidth,
-              ),
+              borderRadius: BorderRadius.circular(50.0),
+              child: Image.asset("assets/icontexto-emoticons-01.ico"),
             ),
           ),
           Positioned(
-              right: 40.0,
+              right: 0.0,
               bottom: 0.0,
               child: FloatingActionButton(
                 backgroundColor: colores.accent,
@@ -83,7 +82,18 @@ class _ImagenState extends State<Imagen> {
                   }
                 });
                 },
-              ))
+              )
+            ),
+            Positioned(
+            right: 80.0,
+            bottom: 0.0,
+            child: FloatingActionButton(
+              backgroundColor: colores.accent,
+              child: Icon(Icons.home),
+              onPressed: () {
+              },
+            )
+          )
         ],
       ),
     );
@@ -108,7 +118,7 @@ class _ContenidoState extends State<Contenido> {
       children: <Widget>[
         Center(
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 30.0),
+            padding: const EdgeInsets.symmetric(vertical: 50.0),
             child: InkWell(
               onTap: () {
                 _getImage().then((value) {
