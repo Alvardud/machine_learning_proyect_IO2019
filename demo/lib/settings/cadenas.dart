@@ -1,5 +1,5 @@
-const String titulo = 'Detector de emociones';
-const String textoEncuesta = "Quieres intentarlo mediante una encuesta?";
-const String foto = 'tomar una foto';
-const String encuesta = 'realizar una encuesta';
+const String titulo = "Deteccion de emociones";
+const String textoEncuesta = "Encuesta";
+const String foto = 'Camara';
+const String encuesta = 'Encuesta';
 const String botonEncuesta = "Hagamoslo!";

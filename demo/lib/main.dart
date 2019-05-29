@@ -36,6 +36,10 @@ class _MyHomepageState extends State<MyHomepage> {
                 flex: 1,
                 child: common.Titulo(),
               ),
+              /*Flexible(
+                flex: 2,
+                child: bottom.Bottom(),
+              ),*/
               Flexible(
                 flex: 6,
                 child: custom.Photo(),
