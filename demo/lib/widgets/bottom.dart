@@ -20,10 +20,6 @@ class Bottom extends StatelessWidget {
 }
 
 class BotonEncuesta extends StatelessWidget {
-<<<<<<< HEAD
-  //Button Home
-=======
->>>>>>> 50dfcb60c380712517a90250888839cb4fa9e26e
   Widget IconButton() {
     return new Icon(
       Icons.home,
@@ -56,18 +52,15 @@ class BotonEncuesta extends StatelessWidget {
           Flexible(
             flex: 3,
             child: Center(
-<<<<<<< HEAD
                 child: InkWell(
               //child: boton(),
-=======
               child: InkWell(
->>>>>>> 50dfcb60c380712517a90250888839cb4fa9e26e
               child: IconButton(),
               onTap: () {
                 //TODO: llevarme a las encuestas
               },
             )),
-          )
+            ))
         ],
       ),
     );

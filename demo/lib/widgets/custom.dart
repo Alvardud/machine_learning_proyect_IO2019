@@ -13,11 +13,9 @@ Future<bool> _getImage() async {
   picture = await ImagePicker.pickImage(
       source: ImageSource.camera, maxWidth: 350.0, maxHeight: 350.0
   );
-<<<<<<< HEAD
+
   //picture = AssetImage('assets/smile.png');
-=======
-  
->>>>>>> 50dfcb60c380712517a90250888839cb4fa9e26e
+
   if (picture != null) {
     return true;
   } else {
@@ -72,7 +70,6 @@ class _ImagenState extends State<Imagen> {
             ),
           ),
           Positioned(
-<<<<<<< HEAD
             right: 0.0,
             bottom: 0.0,
             child: FloatingActionButton(
@@ -91,7 +88,6 @@ class _ImagenState extends State<Imagen> {
             )
           ),
           Positioned(
-=======
               right: 0.0,
               bottom: 0.0,
               child: FloatingActionButton(
@@ -110,7 +106,6 @@ class _ImagenState extends State<Imagen> {
               )
             ),
             Positioned(
->>>>>>> 50dfcb60c380712517a90250888839cb4fa9e26e
             right: 80.0,
             bottom: 0.0,
             child: FloatingActionButton(
